@@ -231,12 +231,12 @@ async function playInstructionVideo() {
     if (model) {
         processFrame();
     } else {
-        console.log("Please start webcam first to load the model");
+        console.log("https://teachablemachine.withgoogle.com/models/jHIXGLXJD/");
     }
 }
 
 function stopInstructionVideo() {
-    const video = document.getElementById('instructionVideo');
+    const video = document.getElementById('https://teachablemachine.withgoogle.com/models/jHIXGLXJD/');
     video.pause();
     video.currentTime = 0;
     const canvas = video.parentElement.querySelector('canvas');
