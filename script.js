@@ -123,21 +123,13 @@ function checkPose(prediction, video) {
                 }
                 break;
             case '2':
-                if (time >= 4.0 && time <= 6.0 && !poseState.triggered) {
+                if (time >= 4.0 && time <= 5.0 && !poseState.triggered) {
                     triggerExplosion(poseState);
                 }
                 break;
             case '3':
-                if ((time >= 9.6 && time <= 11.5 && !poseState.firstWindowTriggered) ||
-                    (time >= 17.5 && time <= 19.5 && !poseState.secondWindowTriggered)) {
-                    if (time <= 13.0) {
-                        poseState.firstWindowTriggered = true;
-                    } else {
-                        poseState.secondWindowTriggered = true;
-                    }
-                    explosionActive = true;
-                    playExplosionSound();
-                    setTimeout(() => { explosionActive = false; }, 300);
+               if (time >= 5.0 && time <= 9.0 && !poseState.triggered) {
+                    triggerExplosion(poseState);
                 }
                 break;
             case '4':
