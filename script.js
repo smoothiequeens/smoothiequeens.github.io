@@ -8,7 +8,7 @@
 // Model URL from Teachable Machine
 //**************************************************
 //* as before, paste your lnk below
-let URL = "https://teachablemachine.withgoogle.com/models/jHIXGLXJD/";
+let URL = "https://teachablemachine.withgoogle.com/models/7iaWZWlYU/";
 
 
 
@@ -118,17 +118,17 @@ function checkPose(prediction, video) {
         
         switch(poseNumber) {
             case '1':
-                if (time >= 1.51 && time <= 2.6 && !poseState.triggered) {
+                if (time >= 1.0 && time <= 3.0 && !poseState.triggered) {
                     triggerExplosion(poseState);
                 }
                 break;
             case '2':
-                if (time >= 4.19 && time <= 5.55 && !poseState.triggered) {
+                if (time >= 4.0 && time <= 6.0 && !poseState.triggered) {
                     triggerExplosion(poseState);
                 }
                 break;
             case '3':
-                if ((time >= 11.5 && time <= 13.0 && !poseState.firstWindowTriggered) ||
+                if ((time >= 9.6 && time <= 11.5 && !poseState.firstWindowTriggered) ||
                     (time >= 17.5 && time <= 19.5 && !poseState.secondWindowTriggered)) {
                     if (time <= 13.0) {
                         poseState.firstWindowTriggered = true;
@@ -141,7 +141,7 @@ function checkPose(prediction, video) {
                 }
                 break;
             case '4':
-                if (time >= 9.6 && time <= 11.55 && !poseState.triggered) {
+                if (time >= 11.5 && time <= 13.0 && !poseState.triggered) {
                     triggerExplosion(poseState);
                 }
                 break;
@@ -231,12 +231,12 @@ async function playInstructionVideo() {
     if (model) {
         processFrame();
     } else {
-        console.log("https://teachablemachine.withgoogle.com/models/jHIXGLXJD/");
+        console.log("https://teachablemachine.withgoogle.com/models/7iaWZWlYU/");
     }
 }
 
 function stopInstructionVideo() {
-    const video = document.getElementById('https://teachablemachine.withgoogle.com/models/jHIXGLXJD/');
+    const video = document.getElementById('https://teachablemachine.withgoogle.com/models/7iaWZWlYU/');
     video.pause();
     video.currentTime = 0;
     const canvas = video.parentElement.querySelector('canvas');
