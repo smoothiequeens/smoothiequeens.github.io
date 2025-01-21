@@ -113,7 +113,7 @@ function checkPose(prediction, video) {
         };
     }
 
-    if (prob > 0.7 && !explosionActive) {
+    if (prob > 0.8 && !explosionActive) {
         const poseState = poseStates[`pose${poseNumber}`];
         
         switch(poseNumber) {
